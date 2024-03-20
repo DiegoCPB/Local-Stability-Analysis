@@ -62,7 +62,7 @@ function [V,omegas,y,U,D1] = eig_OSS_temporal(ydata,Udata,alpha,beta,Re,Ncheb)
     nV1 = size(V,1)/2;
     nV2 = size(V,2);
    
-    %Haj-Hariri 1988 transformation
+    % Pad ends with zeros
     V = [zeros(1,nV2); V(1:nV1,:); zeros(1,nV2); 
-         zeros(1,nV2); V(nV1+1:end,:); zeros(1,nV2)]; % Pad ends with zeros
+         zeros(1,nV2); V(nV1+1:end,:); zeros(1,nV2)];
 end
